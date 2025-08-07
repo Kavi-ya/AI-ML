@@ -32,8 +32,8 @@ This project is an end-to-end AI/ML solution for predicting crop yield. It inclu
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/Kavi-ya/AI-ML.git
+    cd AI-ML
     ```
 
 2.  **Create a virtual environment (recommended):**
