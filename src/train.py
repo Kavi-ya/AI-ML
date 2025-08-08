@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score, mean_absolute_error
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 import pickle
 import json
 
@@ -40,9 +40,11 @@ print("Evaluating the model...")
 y_pred = model.predict(X_test)
 r2 = r2_score(y_test, y_pred)
 mae = mean_absolute_error(y_test, y_pred)
+rmse = mean_squared_error(y_test, y_pred, squared=False)
 
 print(f"R-squared: {r2:.4f}")
 print(f"Mean Absolute Error: {mae:.4f}")
+print(f"Root Mean Squared Error: {rmse:.4f}")
 
 # Save the model
 model_path = "src/model.pkl"
